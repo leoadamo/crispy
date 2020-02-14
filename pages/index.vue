@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <p>teste</p>
-  </div>
+  <Hero />
 </template>
 
 <script>
+import Hero from '@/components/molecules/Hero'
+
 export default {
-  components: {}
+  components: {
+    Hero
+  }
 }
 </script>
 

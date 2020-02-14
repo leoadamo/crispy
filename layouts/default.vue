@@ -1,12 +1,14 @@
 <template>
   <div>
     <Header />
-    <nuxt />
+    <main class="wrapper">
+      <nuxt />
+    </main>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
+import Header from '@/components/templates/Header'
 
 export default {
   components: {

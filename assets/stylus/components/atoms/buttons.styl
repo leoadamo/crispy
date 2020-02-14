@@ -1,0 +1,26 @@
+.btn
+  display flex
+  align-items center
+  justify-content center
+  width rem(135px)
+  height rem(45px)
+  margin-top rem(40px)
+  color $white
+  letter-spacing rem(1px)
+
+  &:last-child
+    margin-top rem(10px)
+
+  +above('m')
+    &:last-child
+      margin-top rem(40px)
+
+    &:not(:last-child)
+      margin-right rem(10px)
+
+  &--gray
+    background-color $secondary-color
+
+  &--orange
+    background-color $primary-color
+
