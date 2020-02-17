@@ -1,0 +1,17 @@
+.footer
+  flex-shrink 0
+  margin-top rem(60px)
+  padding rem(60px 0)
+  background-color $quinternary-color
+
+  &__wrapper
+    @extend .container
+    display grid
+    grid-template-columns 1fr
+    grid-gap rem(20px)
+
+    +above('m')
+      grid-template-columns repeat(4, 1fr)
+      grid-gap rem(40px)
+
+

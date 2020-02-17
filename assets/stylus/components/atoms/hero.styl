@@ -31,14 +31,16 @@
     z-index 2
 
     &__intro
-      center(80%)
+      width auto
+      max-width 80%
+      margin auto
       text-align center
       margin-top rem(15px)
       color $white
 
       +above('m')
-        width 50%
-        uncenter()
+        max-width 50%
+        margin-left 0
         text-align left
 
 
