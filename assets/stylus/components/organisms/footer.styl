@@ -1,7 +1,6 @@
 .footer
-  flex-shrink 0
-  margin-top rem(60px)
-  padding rem(60px 0)
+  flex 0
+  padding rem(60px 0 0)
   background-color $quinternary-color
 
   &__wrapper
@@ -9,9 +8,103 @@
     display grid
     grid-template-columns 1fr
     grid-gap rem(20px)
+    margin-bottom rem(40px)
 
     +above('m')
-      grid-template-columns repeat(4, 1fr)
+      grid-template-columns repeat(2, 1fr)
       grid-gap rem(40px)
+
+    +above('l')
+       grid-template-columns repeat(3, 1.5fr) 2.5fr
+       margin-bottom rem(60px)
+
+  &__info
+    margin-bottom rem(20px)
+
+    +above('m')
+      margin-bottom 0
+
+  &__title
+    margin-bottom rem(20px)
+    font-size rem(22px)
+    line-height rem(26px)
+    font-weight 500
+    letter-spacing rem(1.5px)
+    color $white
+
+  &__subtitle
+    padding-top rem(15px)
+    font-size rem(20px)
+    font-weight 500
+    line-height rem(24px)
+    color $sexagenary-color
+
+    &--trusted
+      color $primary-color
+
+    +above('m')
+      padding-top rem(30px)
+
+  &__description,
+  &__link
+    font-family 'Open Sans'
+    font-size rem(15px)
+    line-height rem(29px)
+    font-weight 400
+    color $sexagenary-color
+
+  &__newsletter
+    display flex
+    padding-top rem(20px)
+
+  &__input
+    flex 4
+    padding rem(15px 12px)
+    font-family Lato
+    font-size rem(14px)
+    line-height rem(21px)
+    letter-spacing rem(1px)
+    border none
+    color $sexagenary-color
+
+  .btn
+    &--orange
+      flex 1
+      min-width auto
+      min-height auto
+      margin 0
+
+  &__social
+    display flex
+    flex-wrap wrap
+    align-items center
+    justify-content flex-start
+    margin-top rem(15px)
+
+  &__brand
+    flex 0 1 auto
+    align-items center
+    justify-content center
+    text-align left
+
+    &:not(:last-child)
+      padding-right rem(10px)
+
+  &__icon
+    display flex
+    padding rem(5px 8px)
+    color $sexagenary-color
+
+  &__copy
+    padding rem(30px 10px)
+    font-family 'Open Sans'
+    font-size rem(15px)
+    font-weight 400
+    line-height rem(29px)
+    color $sexagenary-color
+    text-align center
+    border-top 1px solid $sexagenary-color
+
+
 
 
