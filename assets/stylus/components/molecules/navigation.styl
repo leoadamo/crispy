@@ -42,9 +42,13 @@
 
   &__item
     height auto
+
     +above('l')
       padding rem(0 10px)
       height 100%
+
+      &:last-child
+        padding-right 0
 
     &__link
       display flex

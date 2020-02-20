@@ -1,0 +1,29 @@
+.what-we-do
+  padding rem(40px 0)
+  background-color $seventh-color
+
+  +above('l')
+    padding rem(70px 0)
+
+  .title
+    padding-bottom rem(50px)
+
+    &--tp3
+      padding-bottom rem(20px)
+
+  &__cards
+    display grid
+    grid-template-columns 1fr
+    grid-gap rem(20px)
+
+    +above('m')
+      grid-template-columns repeat(2, 1fr)
+      grid-gap rem(30px)
+
+    +above('l')
+      grid-template-columns repeat(3, 1fr)
+
+  &__service
+    padding rem(60px 40px)
+    background-color $white
+    box-shadow 2px 2px 5px 4px rgba(0, 0, 0, 0.02), -2px -2px 5px 4px rgba(0, 0, 0, 0.02)

@@ -1,0 +1,84 @@
+.about
+  padding rem(40px 0)
+
+  +above('l')
+    padding rem(70px 0 60px)
+
+  .title
+    padding-bottom rem(50px)
+
+  .subtitle
+    padding-bottom rem(20px)
+
+    +above('l')
+      padding-bottom rem(30px)
+
+  &__wrapper
+    display grid
+    grid-template-columns 1fr
+
+    +above('m')
+      grid-template-columns 2fr 1fr
+      grid-column-gap rem(20px)
+
+    +above('l')
+      grid-template-columns 2fr 1fr
+      grid-column-gap rem(50px)
+
+    &:nth-child(odd)
+
+      +above('m')
+        grid-template-columns 1fr 1fr
+        margin-top rem(40px)
+
+      +above('l')
+        margin-top rem(60px)
+
+  &__content--right
+    order 1
+
+  &__list
+    display grid
+    grid-template-columns repeat(2, 1fr)
+    margin-top rem(30px)
+
+    +above('m')
+      grid-template-columns repeat(4, 1fr)
+      margin-bottom 0
+
+  &__item
+    display flex
+    flex-wrap wrap
+    margin-bottom rem(30px)
+
+  &__inner
+    flex 0 1 rem(80px)
+    font-size rem(16px)
+    line-height rem(20px)
+    font-weight 600
+    text-transform uppercase
+    color $tertiary-color
+    text-align center
+
+  &__circle
+    flex 0 1 auto
+    display flex
+    align-items center
+    justify-content center
+    margin-bottom rem(20px)
+    border-radius 50%
+    background-color $primary-color
+
+  &__icon
+    font-size rem(32px)
+    line-height rem(80px)
+    color $white
+
+  &__image
+    margin-bottom rem(30px)
+
+    +above('m')
+      margin-bottom 0
+
+
+

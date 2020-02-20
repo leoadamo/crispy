@@ -10,25 +10,24 @@
       </strong>
     </h1>
     <p
-      class="hero__inner__intro intro-tp1"
+      class="hero__inner__intro description"
     >
-      Onec Consequat Sapien Ut
-      Leo Cursus Rhoncus.
-      Nullam Dui Mi, Vulputate
-      Ac Metus Semper Nullam
+      Onec Consequat Sapien Ut Leo
+      Cursus Rhoncus. Nullam Dui Mi,
+      Vulputate Ac Metus Semper Nullam
       Dui Mi.
     </p>
 
     <div class="btn-wrapper">
       <n-link
-        class="btn btn--gray"
+        class="btn btn--secondary"
         to="/about"
       >
         Read More
       </n-link>
 
       <n-link
-        class="btn btn--orange"
+        class="btn btn--primary"
         to="/contact"
       >
         Contact Us
