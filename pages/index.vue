@@ -2,7 +2,7 @@
   <div>
     <Hero />
     <About />
-    <WhatWeDo />
+    <WhatWeDo :services="services" />
   </div>
 </template>
 
@@ -16,6 +16,28 @@ export default {
     Hero,
     About,
     WhatWeDo
+  },
+  async asyncData({ $axios, error }) {
+    try {
+      const services = await $axios.$get(
+        '/services'
+      )
+
+      return {
+        services
+      }
+    } catch (err) {
+      error({
+        statusCode: 404,
+        message:
+          'Oooops, something goes wrong!'
+      })
+    }
+  },
+  data() {
+    return {
+      services: []
+    }
   }
 }
 </script>

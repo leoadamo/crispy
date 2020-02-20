@@ -6,105 +6,19 @@
       </h2>
 
       <ul class="what-we-do__cards">
-        <li class="what-we-do__service">
+        <li
+          v-for="service in services"
+          :key="service.id"
+          class="what-we-do__service"
+        >
           <h3 class="title title--tp3">
-            Service 1
+            {{ service.title }}
           </h3>
 
           <p
             class="description description--tp2"
           >
-            Vestibulum ante ipsum
-            primiss sed inorc faucibus
-            orcit luctus ipsum et
-            ultrices sede edt posuere
-            cubiliater Curae nisl,
-            Curabit ur quis luctu.
-          </p>
-        </li>
-
-        <li class="what-we-do__service">
-          <h3 class="title title--tp3">
-            Service 2
-          </h3>
-
-          <p
-            class="description description--tp2"
-          >
-            Vestibulum ante ipsum
-            primiss sed inorc faucibus
-            orcit luctus ipsum et
-            ultrices sede edt posuere
-            cubiliater Curae nisl,
-            Curabit ur quis luctu.
-          </p>
-        </li>
-
-        <li class="what-we-do__service">
-          <h3 class="title title--tp3">
-            Service 3
-          </h3>
-
-          <p
-            class="description description--tp2"
-          >
-            Vestibulum ante ipsum
-            primiss sed inorc faucibus
-            orcit luctus ipsum et
-            ultrices sede edt posuere
-            cubiliater Curae nisl,
-            Curabit ur quis luctu.
-          </p>
-        </li>
-
-        <li class="what-we-do__service">
-          <h3 class="title title--tp3">
-            Service 4
-          </h3>
-
-          <p
-            class="description description--tp2"
-          >
-            Vestibulum ante ipsum
-            primiss sed inorc faucibus
-            orcit luctus ipsum et
-            ultrices sede edt posuere
-            cubiliater Curae nisl,
-            Curabit ur quis luctu.
-          </p>
-        </li>
-
-        <li class="what-we-do__service">
-          <h3 class="title title--tp3">
-            Service 5
-          </h3>
-
-          <p
-            class="description description--tp2"
-          >
-            Vestibulum ante ipsum
-            primiss sed inorc faucibus
-            orcit luctus ipsum et
-            ultrices sede edt posuere
-            cubiliater Curae nisl,
-            Curabit ur quis luctu.
-          </p>
-        </li>
-
-        <li class="what-we-do__service">
-          <h3 class="title title--tp3">
-            Service 6
-          </h3>
-
-          <p
-            class="description description--tp2"
-          >
-            Vestibulum ante ipsum
-            primiss sed inorc faucibus
-            orcit luctus ipsum et
-            ultrices sede edt posuere
-            cubiliater Curae nisl,
-            Curabit ur quis luctu.
+            {{ service.description }}
           </p>
         </li>
       </ul>
@@ -114,7 +28,8 @@
 
 <script>
 export default {
-  name: 'WhatWeDo'
+  name: 'WhatWeDo',
+  props: ['services']
 }
 </script>
 
