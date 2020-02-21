@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero />
+    <Hero :data="hero" />
     <About :data="about" />
     <WhatWeDo :data="whatWeDo" />
   </div>
@@ -19,6 +19,11 @@ export default {
     WhatWeDo
   },
   async asyncData(context) {
+    const hero = await get(
+      context,
+      '/hero'
+    )
+
     const about = await get(
       context,
       '/about-us'
@@ -30,12 +35,14 @@ export default {
     )
 
     return {
+      hero,
       about,
       whatWeDo
     }
   },
   data() {
     return {
+      hero: [],
       about: [],
       whatWeDo: []
     }

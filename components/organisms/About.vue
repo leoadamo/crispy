@@ -1,5 +1,5 @@
 <template>
-  <section class="about">
+  <section v-if="data" class="about">
     <div class="container">
       <h2 class="title title--tp2">
         {{ data.title }}

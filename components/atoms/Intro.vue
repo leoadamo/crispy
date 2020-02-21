@@ -1,36 +1,33 @@
 <template>
   <div class="hero__inner">
     <h1 class="title">
-      Tasty And Healthy
+      {{ content.title }}
       <br />
       <strong
         class="title title--strong"
       >
-        Food
+        {{ content.highlighted }}
       </strong>
     </h1>
     <p
       class="hero__inner__intro description"
     >
-      Onec Consequat Sapien Ut Leo
-      Cursus Rhoncus. Nullam Dui Mi,
-      Vulputate Ac Metus Semper Nullam
-      Dui Mi.
+      {{ content.intro }}
     </p>
 
     <div class="btn-wrapper">
       <n-link
-        class="btn btn--secondary"
-        to="/about"
+        v-for="button in content.buttons"
+        :key="button.name"
+        class="btn"
+        :class="
+          button.type === 'primary'
+            ? 'btn--primary'
+            : 'btn--secondary'
+        "
+        :to="button.path"
       >
-        Read More
-      </n-link>
-
-      <n-link
-        class="btn btn--primary"
-        to="/contact"
-      >
-        Contact Us
+        {{ button.inner }}
       </n-link>
     </div>
   </div>
@@ -38,7 +35,8 @@
 
 <script>
 export default {
-  name: 'Intro'
+  name: 'Intro',
+  props: ['content']
 }
 </script>
 

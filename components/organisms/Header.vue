@@ -1,9 +1,7 @@
 <template>
   <header class="header">
     <div class="container">
-      <div
-        class="header__wrapper"
-      >
+      <div class="header__wrapper">
         <Logo />
         <Navigation />
         <Hamburguer />

@@ -1,13 +1,7 @@
 <template>
-  <n-link
-    class="header__logo"
-    to="/"
-  >
+  <n-link class="header__logo" to="/">
     <font-awesome-icon
-      :icon="[
-        'fas',
-        'utensils'
-      ]"
+      :icon="['fas', 'utensils']"
       class="header__logo__icon"
     />
     Crispy

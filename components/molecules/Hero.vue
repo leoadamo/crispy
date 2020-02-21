@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <Banner />
-    <Intro />
+    <Intro :content="data" />
   </div>
 </template>
 
@@ -14,7 +14,8 @@ export default {
   components: {
     Banner,
     Intro
-  }
+  },
+  props: ['data']
 }
 </script>
 

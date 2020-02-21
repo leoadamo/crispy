@@ -1,4 +1,51 @@
 {
+  "navigation": {
+    "links": [
+      {
+        "id": 1,
+        "name": "Home"
+      },
+      {
+        "id": 2,
+        "name": "About Us"
+      },
+      {
+        "id": 3,
+        "name": "Services"
+      },
+      {
+        "id": 4,
+        "name": "Gallery"
+      },
+      {
+        "id": 5,
+        "name": "Blog"
+      },
+      {
+        "id": 6,
+        "name": "Contact Us"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Tasty And Healthy",
+    "highlighted": "Food",
+    "intro": "Onec Consequat Sapien Ut Leo Cursus Rhoncus. Nullam Dui Mi, Vulputate Ac Metus Semper Nullam Dui Mi.",
+    "buttons": [
+      {
+        "name": "about",
+        "type": "secondary",
+        "inner": "Read More",
+        "path": "/about"
+      },
+      {
+        "name": "contact",
+        "type": "primary",
+        "inner": "Contact Us",
+        "path": "/contact"
+      }
+    ]
+  },
   "about-us": {
     "title": "About Us",
     "features": [
