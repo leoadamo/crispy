@@ -1,8 +1,8 @@
 <template>
   <div>
     <Hero />
-    <About />
-    <WhatWeDo :services="services" />
+    <About :data="about" />
+    <WhatWeDo :data="whatWeDo" />
   </div>
 </template>
 
@@ -10,6 +10,7 @@
 import Hero from '@/components/molecules/Hero'
 import About from '@/components/organisms/About'
 import WhatWeDo from '@/components/organisms/WhatWeDo'
+import { get } from '@/mixins'
 
 export default {
   components: {
@@ -17,26 +18,26 @@ export default {
     About,
     WhatWeDo
   },
-  async asyncData({ $axios, error }) {
-    try {
-      const services = await $axios.$get(
-        '/services'
-      )
+  async asyncData(context) {
+    const about = await get(
+      context,
+      '/about-us'
+    )
 
-      return {
-        services
-      }
-    } catch (err) {
-      error({
-        statusCode: 404,
-        message:
-          'Oooops, something goes wrong!'
-      })
+    const whatWeDo = await get(
+      context,
+      '/what-we-do'
+    )
+
+    return {
+      about,
+      whatWeDo
     }
   },
   data() {
     return {
-      services: []
+      about: [],
+      whatWeDo: []
     }
   }
 }

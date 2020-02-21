@@ -13,7 +13,7 @@ module.exports = {
   ],
   rules: {
     'space-before-function-paren': [
-      2,
+      0,
       'never'
     ],
     'no-console': 0,

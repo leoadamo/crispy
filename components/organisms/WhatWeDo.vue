@@ -1,13 +1,16 @@
 <template>
-  <section class="what-we-do">
+  <section
+    v-if="data"
+    class="what-we-do"
+  >
     <div class="container">
       <h2 class="title title--tp2">
-        What We Do
+        {{ data.title }}
       </h2>
 
       <ul class="what-we-do__cards">
         <li
-          v-for="service in services"
+          v-for="service in data.services"
           :key="service.id"
           class="what-we-do__service"
         >
@@ -29,7 +32,7 @@
 <script>
 export default {
   name: 'WhatWeDo',
-  props: ['services']
+  props: ['data']
 }
 </script>
 
