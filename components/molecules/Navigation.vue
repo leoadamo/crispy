@@ -4,64 +4,17 @@
     :class="active"
   >
     <ul class="navigation__list">
-      <li class="navigation__item">
+      <li
+        v-for="link in menuLinks"
+        :key="link.id"
+        class="navigation__item"
+      >
         <n-link
           class="navigation__item__link"
-          href="#"
-          title="Return to home page"
-          to="/"
+          :title="link.title"
+          :to="link.path"
         >
-          Home
-        </n-link>
-      </li>
-      <li class="navigation__item">
-        <n-link
-          class="navigation__item__link"
-          href="#"
-          title="Explore more about us"
-          to="/about"
-        >
-          About Us
-        </n-link>
-      </li>
-      <li class="navigation__item">
-        <n-link
-          class="navigation__item__link"
-          href="#"
-          title="Keep yourself informed about our services"
-          to="/services"
-        >
-          Services
-        </n-link>
-      </li>
-      <li class="navigation__item">
-        <n-link
-          class="navigation__item__link"
-          href="#"
-          title="Access our product's gallery"
-          to="/gallery"
-        >
-          Gallery
-        </n-link>
-      </li>
-      <li class="navigation__item">
-        <n-link
-          class="navigation__item__link"
-          href="#"
-          title="Access our blog"
-          to="/blog"
-        >
-          Blog
-        </n-link>
-      </li>
-      <li class="navigation__item">
-        <n-link
-          class="navigation__item__link"
-          href="#"
-          title="Contact Us"
-          to="/contact"
-        >
-          Contact Us
+          {{ link.name }}
         </n-link>
       </li>
     </ul>
@@ -74,7 +27,10 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'Navigation',
   computed: {
-    ...mapGetters(['menuActive']),
+    ...mapGetters([
+      'menuActive',
+      'menuLinks'
+    ]),
     active() {
       return (
         this.menuActive &&

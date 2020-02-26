@@ -3,10 +3,12 @@
     <Hero :data="hero" />
     <About :data="about" />
     <WhatWeDo :data="whatWeDo" />
+    <Appointment :data="appointment" />
   </div>
 </template>
 
 <script>
+import Appointment from '@/components/atoms/Appointment'
 import Hero from '@/components/molecules/Hero'
 import About from '@/components/organisms/About'
 import WhatWeDo from '@/components/organisms/WhatWeDo'
@@ -16,7 +18,8 @@ export default {
   components: {
     Hero,
     About,
-    WhatWeDo
+    WhatWeDo,
+    Appointment
   },
   async asyncData(context) {
     const hero = await get(
@@ -34,17 +37,24 @@ export default {
       '/what-we-do'
     )
 
+    const appointment = await get(
+      context,
+      '/appointment'
+    )
+
     return {
       hero,
       about,
-      whatWeDo
+      whatWeDo,
+      appointment
     }
   },
   data() {
     return {
       hero: [],
       about: [],
-      whatWeDo: []
+      whatWeDo: [],
+      appointment: []
     }
   }
 }
