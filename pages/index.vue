@@ -1,9 +1,14 @@
 <template>
   <div>
-    <Hero :data="hero" />
-    <About :data="about" />
-    <WhatWeDo :data="whatWeDo" />
-    <Appointment :data="appointment" />
+    <Hero :hero="hero" />
+    <About :about="about" />
+    <WhatWeDo :wwd="whatWeDo" />
+    <Testimonials
+      :testimonials="testimonials"
+    />
+    <Appointment
+      :appointment="appointment"
+    />
   </div>
 </template>
 
@@ -12,6 +17,7 @@ import Appointment from '@/components/atoms/Appointment'
 import Hero from '@/components/molecules/Hero'
 import About from '@/components/organisms/About'
 import WhatWeDo from '@/components/organisms/WhatWeDo'
+import Testimonials from '@/components/organisms/Testimonials'
 import { get } from '@/mixins'
 
 export default {
@@ -19,7 +25,8 @@ export default {
     Hero,
     About,
     WhatWeDo,
-    Appointment
+    Appointment,
+    Testimonials
   },
   async asyncData(context) {
     const hero = await get(
@@ -37,6 +44,11 @@ export default {
       '/what-we-do'
     )
 
+    const testimonials = await get(
+      context,
+      '/testimonials'
+    )
+
     const appointment = await get(
       context,
       '/appointment'
@@ -46,6 +58,7 @@ export default {
       hero,
       about,
       whatWeDo,
+      testimonials,
       appointment
     }
   },
@@ -54,6 +67,7 @@ export default {
       hero: [],
       about: [],
       whatWeDo: [],
+      testimonials: [],
       appointment: []
     }
   }

@@ -1,17 +1,20 @@
 <template>
-  <div class="appointment">
+  <div
+    v-if="appointment"
+    class="appointment"
+  >
     <h4 class="title title--tp4">
-      {{ data.title }}
+      {{ appointment.title }}
     </h4>
     <p
       class="description description--tp2"
     >
-      {{ data.description }}
+      {{ appointment.description }}
     </p>
     <h3
       class="description description--tp3"
     >
-      {{ data.contact }}
+      {{ appointment.contact }}
     </h3>
   </div>
 </template>
@@ -19,7 +22,7 @@
 <script>
 export default {
   name: 'Appointment',
-  props: ['data']
+  props: ['appointment']
 }
 </script>
 

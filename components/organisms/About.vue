@@ -1,12 +1,12 @@
 <template>
-  <section v-if="data" class="about">
+  <section v-if="about" class="about">
     <div class="container">
       <h2 class="title title--tp2">
-        {{ data.title }}
+        {{ about.title }}
       </h2>
 
       <div
-        v-for="feature in data.features"
+        v-for="feature in about.features"
         :key="feature.id"
         class="about__wrapper"
       >
@@ -32,7 +32,11 @@
             v-if="feature.hasIcons"
             class="about__list"
           >
-            <li class="about__item">
+            <li
+              v-for="icon in feature.icons"
+              :key="icon.id"
+              class="about__item"
+            >
               <div class="about__inner">
                 <div
                   class="about__circle"
@@ -42,73 +46,13 @@
                   >
                     <font-awesome-icon
                       :icon="[
-                        'fas',
-                        'birthday-cake'
+                        icon.type,
+                        icon.name
                       ]"
                     />
                   </span>
                 </div>
-                Healthy
-              </div>
-            </li>
-
-            <li class="about__item">
-              <div class="about__inner">
-                <div
-                  class="about__circle"
-                >
-                  <span
-                    class="about__icon"
-                  >
-                    <font-awesome-icon
-                      :icon="[
-                        'fas',
-                        'rocket'
-                      ]"
-                    />
-                  </span>
-                </div>
-                Spicy &amp; Hot
-              </div>
-            </li>
-
-            <li class="about__item">
-              <div class="about__inner">
-                <div
-                  class="about__circle"
-                >
-                  <span
-                    class="about__icon"
-                  >
-                    <font-awesome-icon
-                      :icon="[
-                        'fas',
-                        'utensils'
-                      ]"
-                    />
-                  </span>
-                </div>
-                Crunchy
-              </div>
-            </li>
-
-            <li class="about__item">
-              <div class="about__inner">
-                <div
-                  class="about__circle"
-                >
-                  <span
-                    class="about__icon"
-                  >
-                    <font-awesome-icon
-                      :icon="[
-                        'fas',
-                        'coffee'
-                      ]"
-                    />
-                  </span>
-                </div>
-                Reciepe
+                {{ icon.description }}
               </div>
             </li>
           </ul>
@@ -129,7 +73,7 @@
 <script>
 export default {
   name: 'About',
-  props: ['data']
+  props: ['about']
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="hero">
+  <div v-if="hero" class="hero">
     <Banner />
-    <Intro :content="data" />
+    <Intro :content="hero" />
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     Banner,
     Intro
   },
-  props: ['data']
+  props: ['hero']
 }
 </script>
 
