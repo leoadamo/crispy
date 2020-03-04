@@ -1,20 +1,20 @@
 <template>
   <div>
-    <Appointment :data="appointment" />
+    <Appointment
+      :appointment="appointment"
+    />
   </div>
 </template>
 
 <script>
 import Appointment from '@/components/atoms/Appointment'
-import { get } from '@/mixins'
 
 export default {
   components: {
     Appointment
   },
-  async asyncData(context) {
-    const appointment = await get(
-      context,
+  async asyncData({ app }) {
+    const appointment = await app.$get(
       '/appointment'
     )
 

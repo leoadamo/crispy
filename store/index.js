@@ -1,5 +1,3 @@
-import { get } from '@/mixins'
-
 export const state = () => ({
   menuLinks: [],
   menuActive: false
@@ -23,12 +21,9 @@ export const mutations = {
 export const actions = {
   async nuxtServerInit(
     { dispatch },
-    context
+    { app }
   ) {
-    const res = await get(
-      context,
-      '/links'
-    )
+    const res = await app.$get('/links')
 
     dispatch('SET_MENU', res)
   },

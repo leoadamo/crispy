@@ -18,7 +18,6 @@ import Hero from '@/components/molecules/Hero'
 import About from '@/components/organisms/About'
 import WhatWeDo from '@/components/organisms/WhatWeDo'
 import Testimonials from '@/components/organisms/Testimonials'
-import { get } from '@/mixins'
 
 export default {
   components: {
@@ -28,29 +27,22 @@ export default {
     Appointment,
     Testimonials
   },
-  async asyncData(context) {
-    const hero = await get(
-      context,
-      '/hero'
-    )
+  async asyncData({ app }) {
+    const hero = await app.$get('/hero')
 
-    const about = await get(
-      context,
+    const about = await app.$get(
       '/about-us'
     )
 
-    const whatWeDo = await get(
-      context,
+    const whatWeDo = await app.$get(
       '/what-we-do'
     )
 
-    const testimonials = await get(
-      context,
+    const testimonials = await app.$get(
       '/testimonials'
     )
 
-    const appointment = await get(
-      context,
+    const appointment = await app.$get(
       '/appointment'
     )
 

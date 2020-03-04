@@ -3,7 +3,14 @@
     v-if="testimonials"
     class="testimonials"
   >
-    <Testimonial :data="testimonials" />
+    <h2 class="title title--tp2">
+      {{ testimonials.title }}
+    </h2>
+    <div class="container">
+      <Testimonial
+        :cites="testimonials.cites"
+      />
+    </div>
   </section>
 </template>
 

@@ -1,21 +1,31 @@
 <template>
-  <ul class="testimonials">
+  <ul class="testimonials__wrapper">
     <li
-      v-for="testimonial in data"
+      v-for="testimonial in cites"
       :key="testimonial.id"
       class="testimonial"
     >
       <blockquote
         class="testimonial__quote"
       >
+        <div class="testimonial__inner">
+          <font-awesome-icon
+            :icon="[
+              'fas',
+              'quote-right'
+            ]"
+          />
+          <p class="testimonial__cite">
+            {{ testimonial.cite }}
+          </p>
+        </div>
         <font-awesome-icon
-          :icon="['fas', 'quote-right']"
+          :icon="['fas', 'ellipsis-h']"
+          class="testimonial__icon"
+        />
+        <footer
+          class="testimonial__footer"
         >
-        </font-awesome-icon>
-        <p class="testimonial__cite">
-          {{ testimonial.cite }}
-        </p>
-        <footer>
           <picture>
             <img
               :src="testimonial.avatar"
@@ -26,22 +36,28 @@
             />
           </picture>
 
-          <h5
-            class="testimonial__author"
+          <div
+            class="testimonial__info"
           >
-            {{ testimonial.author }}
-          </h5>
+            <h5
+              class="title title--tp5"
+            >
+              {{ testimonial.author }}
+            </h5>
 
-          <time
-            :datetime="testimonial.date"
-            class="testimonial__date"
-            v-text="
-              `- ${formatDate(
+            <time
+              :datetime="
                 testimonial.date
-              )}`
-            "
-          >
-          </time>
+              "
+              class="description description--tp4"
+              v-text="
+                `- ${formatDate(
+                  testimonial.date
+                )}`
+              "
+            >
+            </time>
+          </div>
         </footer>
       </blockquote>
     </li>
@@ -51,7 +67,7 @@
 <script>
 export default {
   name: 'Testimonial',
-  props: ['data'],
+  props: ['cites'],
   methods: {
     formatDate(value) {
       const date = new Date(value)

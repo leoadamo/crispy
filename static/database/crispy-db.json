@@ -57,7 +57,7 @@
     ]
   },
   "about-us": {
-    "title": "About Us",
+    "title": "about us",
     "features": [
       {
         "id": 1,
@@ -111,7 +111,7 @@
     ]
   },
   "what-we-do": {
-    "title": "What We Do",
+    "title": "what We Do",
     "services": [
       {
         "id": 1,
@@ -145,29 +145,32 @@
       }
     ]
   },
-  "testimonials": [
-    {
-      "id": 1,
-      "cite": "Sed semper leo metus, a lacinia eros ut semper at. Etiam sodales orci sit amet vehicula pellentesque. blandit nec sed tellus. Nam pharetra.",
-      "author": "John Doe",
-      "date": "2019-03-10T17:46:56.782Z",
-      "avatar": "https://randomuser.me/api/portraits/men/70.jpg"
-    },
-    {
-      "id": 2,
-      "cite": "Sed semper leo metus, a lacinia eros ut semper at. Etiam sodales orci sit amet vehicula pellentesque.",
-      "author": "Mary Jane",
-      "date": "2017-11-30T17:46:56.782Z",
-      "avatar": "https://randomuser.me/api/portraits/women/56.jpg"
-    },
-    {
-      "id": 3,
-      "cite": "Sed semper leo metus, a lacinia eros ut semper at. Etiam sodales orci sit amet vehicula pellentesque. blandit nec sed tellus. Nam pharetra. Etiam sodales orci sit amet vehicula pellentesque. blandit nec sed tellus. Nam pharetra. Etiam sodales orci sit amet vehicula pellentesque. blandit nec sed tellus. Nam pharetra.",
-      "author": "James Warren",
-      "date": "2018-01-10T17:46:56.782Z",
-      "avatar": "https://randomuser.me/api/portraits/men/36.jpg"
-    }
-  ],
+  "testimonials": {
+    "title": "testimonials",
+    "cites": [
+      {
+        "id": 1,
+        "cite": "Sed semper leo metus, a lacinia eros ut semper at. Etiam sodales orci sit amet vehicula pellentesque. blandit nec sed tellus. Nam pharetra.",
+        "author": "John Doe",
+        "date": "2019-03-10T17:46:56.782Z",
+        "avatar": "https://randomuser.me/api/portraits/men/70.jpg"
+      },
+      {
+        "id": 2,
+        "cite": "Sed semper leo metus, a lacinia eros ut semper at. Etiam sodales orci sit amet vehicula pellentesque.",
+        "author": "Mary Jane",
+        "date": "2017-11-30T17:46:56.782Z",
+        "avatar": "https://randomuser.me/api/portraits/women/56.jpg"
+      },
+      {
+        "id": 3,
+        "cite": "Sed semper leo metus, a lacinia eros ut semper at. Etiam sodales orci sit amet vehicula pellentesque. blandit nec sed tellus. Nam pharetra. Etiam sodales orci sit amet vehicula pellentesque.",
+        "author": "James Warren",
+        "date": "2018-01-10T17:46:56.782Z",
+        "avatar": "https://randomuser.me/api/portraits/men/36.jpg"
+      }
+    ]
+  },
   "appointment": {
     "title": "Eat Healthy And Delicious Crispy From Our Hotel",
     "description": "Call Us To Book Your Table Today Or To Order Your Food",
