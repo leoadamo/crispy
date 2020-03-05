@@ -10,7 +10,7 @@
         :key="feature.id"
         class="about__wrapper"
       >
-        <div
+        <article
           class="about__content"
           :class="
             feature.content === 'right'
@@ -56,7 +56,7 @@
               </div>
             </li>
           </ul>
-        </div>
+        </article>
 
         <picture>
           <img
@@ -66,6 +66,7 @@
           />
         </picture>
       </div>
+      </article>
     </div>
   </section>
 </template>

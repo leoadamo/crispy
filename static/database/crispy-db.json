@@ -171,6 +171,35 @@
       }
     ]
   },
+  "news": {
+    "title": "latest news",
+    "posts": [
+      {
+        "id": 1,
+        "title": "Nullam Dui Mi, Vulputate Ac Cursus.",
+        "text": "onec consequat sapien ut leo cursus rhoncus. Nullam duit mi, vulputate ac metus semper Nullam dui mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices morbi posuere cubilia Curae; Curabitur quis luctus lectus. leo et cursus rhoncus. Nullam dui mi, vulputate cursus.",
+        "date": "2019-03-03T09:56:45.782Z",
+        "button": "view post",
+        "image": {
+          "path": "/images/about-image-1.jpg",
+          "alt": "Blog post"
+        },
+        "content": "right"
+      },
+      {
+        "id": 2,
+        "title": "Lorem ipsum dolor sit amet",
+        "text": "onec consequat sapien ut leo cursus rhoncus. Nullam duit mi, vulputate ac metus semper Nullam dui mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices morbi posuere cubilia Curae; Curabitur quis luctus lectus.",
+        "date": "2017-05-14T09:56:45.782Z",
+        "button": "view post",
+        "image": {
+          "path": "/images/about-image-2.jpg",
+          "alt": "Blog post"
+        },
+        "content": "left"
+      }
+    ]
+  },
   "appointment": {
     "title": "Eat Healthy And Delicious Crispy From Our Hotel",
     "description": "Call Us To Book Your Table Today Or To Order Your Food",
