@@ -64,6 +64,7 @@
         "title": "Enjoy The Greatest Preasure In Our Hotel!",
         "description": "Suspendisse id felis sed felis tincidunt finibus. Nulla sed justo tellus. Donec ut felis ante. Quisque ac sapien quis orci pulvinar finibus quis eu urna. onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus semper Nullam dui mi. Vestibulum ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur quis.",
         "hasIcons": true,
+        "changeOrder": false,
         "icons": [
           {
             "id": 1,
@@ -90,7 +91,6 @@
             "description": "Reciepe"
           }
         ],
-        "content": "left",
         "image": {
           "path": "/images/about-image-1.jpg",
           "alt": "A picture of a nice recipient"
@@ -101,8 +101,8 @@
         "title": "A Tasty And Healthy Crispy That We Serve For You.",
         "description": "Lorem suspendisse id felis sed felis tincidunt finibus. Nulla sed in justo inter tellus. Donec ut felis ante. Quisque acin sapien quis orci pulvinar finibus quis urna. onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac quis eu urna Quisque quis eu urna lorem elit. Quisque ac sapien quis orci pulvinar finibus quis eu urna Quisque Suspendisse id felis sed felis tincidunt finibus. Nulla sed justo tellus. Donec ut felis ante ipsum.",
         "hasIcons": false,
+        "changeOrder": true,
         "icons": null,
-        "content": "right",
         "image": {
           "path": "/images/about-image-2.jpg",
           "alt": "Some recipe"
@@ -180,8 +180,9 @@
         "text": "onec consequat sapien ut leo cursus rhoncus. Nullam duit mi, vulputate ac metus semper Nullam dui mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices morbi posuere cubilia Curae; Curabitur quis luctus lectus. leo et cursus rhoncus. Nullam dui mi, vulputate cursus.",
         "date": "2019-03-03T09:56:45.782Z",
         "button": "view post",
+        "route": "/blog",
         "image": {
-          "path": "/images/about-image-1.jpg",
+          "path": "/images/post-image-1.jpg",
           "alt": "Blog post"
         },
         "content": "right"
@@ -192,8 +193,9 @@
         "text": "onec consequat sapien ut leo cursus rhoncus. Nullam duit mi, vulputate ac metus semper Nullam dui mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices morbi posuere cubilia Curae; Curabitur quis luctus lectus.",
         "date": "2017-05-14T09:56:45.782Z",
         "button": "view post",
+        "route": "/blog",
         "image": {
-          "path": "/images/about-image-2.jpg",
+          "path": "/images/post-image-2.jpg",
           "alt": "Blog post"
         },
         "content": "left"

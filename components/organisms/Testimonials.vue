@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Testimonial from '@/components/atoms/Testimonial'
+import Testimonial from '@/components/molecules/Testimonial'
 
 export default {
   name: 'Testimonials',

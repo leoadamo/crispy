@@ -13,9 +13,8 @@
         <article
           class="about__content"
           :class="
-            feature.content === 'right'
-              ? 'about__content--right'
-              : ''
+            feature.changeOrder &&
+              'about__content--right'
           "
         >
           <h3 class="subtitle">
@@ -66,7 +65,6 @@
           />
         </picture>
       </div>
-      </article>
     </div>
   </section>
 </template>

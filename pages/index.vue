@@ -6,6 +6,7 @@
     <Testimonials
       :testimonials="testimonials"
     />
+    <News :news="news" />
     <Appointment
       :appointment="appointment"
     />
@@ -18,6 +19,7 @@ import Hero from '@/components/molecules/Hero'
 import About from '@/components/organisms/About'
 import WhatWeDo from '@/components/organisms/WhatWeDo'
 import Testimonials from '@/components/organisms/Testimonials'
+import News from '@/components/organisms/News'
 
 export default {
   components: {
@@ -25,7 +27,8 @@ export default {
     About,
     WhatWeDo,
     Appointment,
-    Testimonials
+    Testimonials,
+    News
   },
   async asyncData({ app }) {
     const hero = await app.$get('/hero')
@@ -46,12 +49,15 @@ export default {
       '/appointment'
     )
 
+    const news = await app.$get('/news')
+
     return {
       hero,
       about,
       whatWeDo,
       testimonials,
-      appointment
+      appointment,
+      news
     }
   },
   data() {
