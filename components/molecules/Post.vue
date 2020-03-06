@@ -4,23 +4,40 @@
       v-for="post in posts"
       :key="post.id"
       class="post"
+      :class="
+        post.changeContent &&
+          'post--image-bigger'
+      "
     >
-      <article class="post__content">
-        <time :datetime="post.date">{{
-          formatDate(post.date)
-        }}</time>
+      <article
+        class="post__content"
+        :class="
+          post.changeContent &&
+            'post__content--right'
+        "
+      >
+        <time
+          class="title title--tp6"
+          :datetime="post.date"
+        >
+          {{ formatDate(post.date) }}
+        </time>
 
-        <h2 class="title title--tp3">
+        <h2
+          class="subtitle subtitle--tp2"
+        >
           {{ post.title }}
         </h2>
 
-        <p class="post__text">
+        <p
+          class="description description--tp2"
+        >
           {{ post.text }}
         </p>
 
         <n-link
           :to="post.route"
-          class="post__view"
+          class="btn btn--secondary"
           :title="post.title"
         >
           {{ post.button }}

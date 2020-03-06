@@ -4,4 +4,30 @@
   grid-gap rem(30px)
 
   +above('l')
-    grid-template-columns 1fr 2fr
+    grid-template-columns 1fr 1.5fr
+
+  &--image-bigger
+    margin-bottom rem(50px)
+
+    +above('l')
+      grid-template-columns 1.5fr 1fr
+
+  &__content
+    display flex
+    flex-direction column
+    justify-content space-between
+    align-self flex-start
+
+    +above('l')
+      align-self center
+
+    &--right
+      order 1
+
+
+  .btn--secondary
+    max-width 20%
+    margin-top rem(15px)
+
+    +above('l')
+      max-width 25%
