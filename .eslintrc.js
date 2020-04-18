@@ -21,9 +21,9 @@ module.exports = {
     'vue/require-prop-types': 0,
     'vue/html-self-closing': 0,
     'vue/max-attributes-per-line': [
-      2,
+      'error',
       {
-        singleline: 2,
+        singleline: 1,
         multiline: {
           max: 1,
           allowFirstLine: false
