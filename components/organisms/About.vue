@@ -1,5 +1,8 @@
 <template>
-  <section v-if="about" class="about">
+  <section
+    v-if="about"
+    class="about"
+  >
     <div class="container">
       <h2 class="title title--tp2">
         {{ about.title }}
