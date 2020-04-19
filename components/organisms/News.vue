@@ -1,8 +1,5 @@
 <template>
-  <section
-    v-if="news"
-    class="news"
-  >
+  <section v-if="news" class="news">
     <h2 class="title title--tp2">
       {{ news.title }}
     </h2>

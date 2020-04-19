@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-if="hero"
-    class="hero"
-  >
+  <div v-if="hero" class="hero">
     <Banner />
     <Intro :content="hero" />
   </div>
