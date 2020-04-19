@@ -15,7 +15,10 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   rules: {
-    'space-before-function-paren': [0, 'never'],
+    'space-before-function-paren': [
+      0,
+      'never'
+    ],
     'no-console': 0,
     'vue/require-default-prop': 0,
     'vue/require-prop-types': 0,
